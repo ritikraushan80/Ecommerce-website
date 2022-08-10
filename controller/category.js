@@ -37,12 +37,12 @@ async function getCategories(req, res) {
 
 
 async function getCategoryOnId(req, res) {
-    const categoryId = req.params.id
+    const categoryId = req.params.name
     try {
 
         const result = await categories.findOne({
             where: {
-                id: categoryId
+                name: categoryId
             }
         })
         res.send(result)
