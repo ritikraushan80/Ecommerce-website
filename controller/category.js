@@ -2,9 +2,6 @@ const { categories } = require('../models')
 
 async function createCategory(req, res) {
     const data = req.body;
-    if (!data.name) {
-        res.status(400).send({ 'msg': 'name is mandatory' })
-    }
     const name = data.name;
     const description = data.description;
 
