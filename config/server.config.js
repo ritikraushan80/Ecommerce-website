@@ -1,11 +1,11 @@
-let serverPort = 4500;
+// let serverPort = 4500;
 
-if(process.env.NODE_ENV !== 'development'){
+if(process.env.NODE_ENV !== 'production'){
     require('dotenv').config()
-   serverPort = process.env.PORT   
+//    serverPort = process.env.PORT   
 
 } 
 
 module.exports = {
-    serverPort:serverPort
+    serverPort: process.env.PORT
 }

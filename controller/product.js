@@ -14,18 +14,18 @@ async function createProduct(req, res) {
         const categoryId = productData.categoryId;
 
         const result = await Products.create({ name, description, cost, quantity,categoryId});
-        res.send({ msg: 'Product created Successfully', result })
+        res.status(200).send({ msg: 'Product created Successfully', result })
     } catch (err) {
-        res.status(500).send({ msg: 'Something server Error', err })
+        res.status(500).send({ msg: 'Internal server Error', err })
     }
 }
 
 async function getProducts(req, res) {
     try {
         const data = await Products.findAll()
-        res.send({ msg: 'Success', data })
+        res.status(201).send( data )
     } catch (err) {
-        res.status(500).send({ msg: 'Something server Error', err })
+        res.status(500).send({ msg: 'Internal server Error', err })
     }
 }
 

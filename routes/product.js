@@ -5,7 +5,7 @@ const routes = express.Router()
 
 routes.post('/eComm/api/v1/createProducts',[validateProductData,verifyToken, isAdmin],createProduct)
 
-routes.get('/eComm/api/v1/getProducts',[verifyToken, isAdmin],getProducts)
+routes.get('/eComm/api/v1/product', getProducts)
 
 routes.get('/eComm/api/v1/filterProducts', filterProducts)
 
