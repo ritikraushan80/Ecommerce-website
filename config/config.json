@@ -15,9 +15,9 @@
     "dialect": "mysql"
   },
   "production": {
-    "username": "ecommerce__api",
+    "username": "ritikraushan80",
     "password":  "Ritik80@",
-    "database": "database_production",
+    "database": "ecommerce__api",
     "host": "db4free.net",
     "dialect": "mysql"
   }
